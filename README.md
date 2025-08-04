@@ -8,3 +8,7 @@ A production grade FastAPI service for AI Background Generation using fine-tuned
 - [product-development](https://github.com/VimukthiRandika1997/AI-background-generation)
 
 ![Sample generated product-shots](/ai-background-generation/assets/sample_image.png)
+
+## RAGs
+
+Production grade RAG for business-usecases
