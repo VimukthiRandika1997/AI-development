@@ -11,4 +11,4 @@ A production grade FastAPI service for AI Background Generation using fine-tuned
 
 ## RAGs
 
-Production grade RAG for business-usecases: [check-this](/ai-background-generation/README.md) 
+Production grade RAG for business-usecases: [check-this](/ai_workflows/Document_analysis_RAG/README.md) 
