@@ -22,4 +22,4 @@ Architecting the FastAPI for different use-cases.
 
 - A non-blocking, async-safe job-system to handle long-running background tasks: [more details](/api_design/FastAPI/long_running_jobs_with_fastapi/README.md)
 
-- ![system-architecture](/api_design/FastAPI/long_running_jobs_with_fastapi/assets/long_running_task_overview.png)
+    ![system-architecture](/api_design/FastAPI/long_running_jobs_with_fastapi/assets/long_running_task_overview.png)
