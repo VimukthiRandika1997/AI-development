@@ -17,6 +17,10 @@ Hence we need a non-blocking, aysnc-safe job system to handle these types of lon
 
 ### Modular Architecture Diagram
 
+![system-architecture](/api_design/FastAPI/long_running_jobs_with_fastapi/assets/long_running_task_overview.png)
+
+### Workflow
+
 ```markdown
 +-------------------+
 |      Client       |
@@ -136,7 +140,7 @@ docker-compose.yml
     - Redis broker → redis://redis:6379/0 (inside Docker network)
     - Celery worker automatically connected
 
-2. ✅ Usage
+2. 📋 Usage
 
     1. Start a job:
 
@@ -158,7 +162,7 @@ docker-compose.yml
 - worker → Celery worker
 - redis → Broker
 
-# Analysis
+# 🧠 Analysis
 
 - Additionally we can setup a webhook to get the result of a particular task once it is completed:
 
@@ -168,3 +172,18 @@ docker-compose.yml
     |-----------------|-----------------|-----------------|
     | Polling  | simple to implement  | heavy load on the server  |
     | Wehhooks  | real-time notification  | endpoints must be exposed  |
+
+# 🛡️ Production Considerations
+
+- Add **authentication** to endpoints and webhooks
+- Implement retry-mechanism for failed webhook deliveries
+- Add timeouts for stale jobs
+
+
+# 💭 Final Thoughts
+
+- Using this base layout, now we can build scalable system for serving long-running jobs without blocking our main app thread. 
+- Common use-cases could be like:
+    - ML inference
+    - Report Generation ( like model metric-generation after inference )
+    - Video Analysis
