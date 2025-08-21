@@ -16,7 +16,7 @@ Production grade RAG for business-usecases: [check-this](/ai_workflows/Document_
 
 ## FastAPI Design
 
-Architecturing the FastAPI for different use-cases. 
+Architecting the FastAPI for different use-cases. 
 
 - ## Handling Long Running Jobs with FastAPI
 
