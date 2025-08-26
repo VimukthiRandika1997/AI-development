@@ -1,0 +1,36 @@
+version: '3.8'
+
+
+services:
+  web:
+    build: .
+    container_name: fastapi-webhooks-web
+    ports:
+    - "8000:8000"
+    env_file: .env
+    depends_on:
+    - redis
+
+
+  worker:
+    image: python:3.11-slim
+    container_name: fastapi-webhooks-worker
+    env_file: .env
+    working_dir: /app
+    volumes:
+    - ./:/app
+    environment:
+      - PYTHONPATH=/app
+    command: ["bash", "-c", "pip install -r requirements.txt && python -u app/worker.py"]
+    depends_on:
+    - redis
+
+
+  redis:
+    image: redis:7-alpine
+    container_name: fastapi-webhooks-redis
+    ports:
+    - "6379:6379"
+
+
+# optional: add rq-dashboard or admin service later

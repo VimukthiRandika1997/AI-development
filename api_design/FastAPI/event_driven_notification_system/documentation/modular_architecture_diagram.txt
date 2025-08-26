@@ -1,0 +1,46 @@
+flowchart LR
+    subgraph external[External Actors]
+        Client[Client / Third-party]
+        Webhook[Webhook Consumer]
+    end
+
+    subgraph api_layer[API Layer]
+        LB[Load Balancer / Ingress]
+        API[FastAPI app]
+    end
+
+    subgraph queueing[Queueing & Broker]
+        Redis[Redis:RQ queues]
+    end
+
+    subgraph workers[Worker Layer]
+        WorkerPool[Worker Pool: RQ workers]
+    end
+
+    subgraph persistence[Persistence & Observability]
+        DB[(Postgres / Mongo)]
+        DLQ[(Dead-letter store)]
+        Logs[(Logging / ELK)]
+        Metrics[(Prometheus / Grafana)]
+    end
+
+    subgraph admin[Admin & DevOps]
+        UI[Admin UI / Retry dashboard]
+        CI[CI/CD / Kubernetes]
+    end
+
+    Client --> LB --> API
+    API --> Redis
+    API --> DB
+    Redis --> WorkerPool
+    WorkerPool --> Webhook
+    WorkerPool --> DLQ
+    WorkerPool --> DB
+    API --> UI
+    WorkerPool --> Logs
+    Logs --> Metrics
+    API --> Metrics
+    CI --> API
+
+    classDef infra fill:#f8f9fa,stroke:#333,stroke-width:1px
+    class Redis,WorkerPool,DB infra

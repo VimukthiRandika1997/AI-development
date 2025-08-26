@@ -1,0 +1,23 @@
+sequenceDiagram
+  participant Client as Client
+  participant FastAPI as FastAPI
+  participant Worker as Worker
+  participant Webhook as External
+  participant Queue as Queue
+
+  Client ->> FastAPI: POST /order (order payload)
+  FastAPI ->> Queue: Enqueue job (url, payload, event)
+  FastAPI -->> Client: 200 OK (order accepted)
+  Note over Queue, Worker: Asynchronous delivery lifecycle
+  Worker ->> Queue: Reserve / fetch job
+  Worker ->> Webhook: POST /webhook (payload + X-Signature + X-Event-Name)
+  Webhook -->> Worker: 2xx OR 4xx/5xx
+  alt 2xx
+    Worker ->> Queue: mark job success, log delivery
+  else 4xx/5xx or timeout
+    Worker ->> Worker: retry with backoff (Retry object)
+    Worker ->> Queue: if exhausted -> dead-letter / failure store
+  end
+  Note right of Worker: Delivery logs, metrics, and alerts streamed to observability stack
+
+
