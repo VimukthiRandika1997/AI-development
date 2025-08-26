@@ -84,6 +84,11 @@ event_driven_notification_system/
 
 That function uses httpx synchronously (or with retry logic).
 
+<!-- ## How RQ works:
+
+1. RQ enqueues callables (functions) into Redis.
+2. A worker process pulls the job and executes it. -->
+
 
 # How to run (Locally):
 

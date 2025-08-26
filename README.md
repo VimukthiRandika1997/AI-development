@@ -23,3 +23,7 @@ Architecting the FastAPI for different use-cases.
 - A non-blocking, async-safe job-system to handle long-running background tasks: [more details](/api_design/FastAPI/long_running_jobs_with_fastapi/README.md)
 
     ![system-architecture](/api_design/FastAPI/long_running_jobs_with_fastapi/assets/long_running_task_overview.png)
+
+- ## Event Driven Notification System with Webhooks
+
+- A FastAPI-based webhook dispatcher with worker support. Here we are designing a complete system for learning purpose: [more details](/api_design/FastAPI/event_driven_notification_system/README.md)
