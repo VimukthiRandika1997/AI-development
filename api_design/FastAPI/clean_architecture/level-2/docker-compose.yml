@@ -1,0 +1,55 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:15
+    container_name: tasks_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: tasks_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      retries: 5
+
+  web:
+    build: .
+    container_name: fastapi_app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://postgres:password@db:5432/tasks_db
+    depends_on:
+      db:
+        condition: service_healthy
+
+  alembic:
+    build: .
+    container_name: alembic_migrations
+    command: ["./wait-for-db.sh", "db", "alembic", "upgrade", "head"]
+    volumes:
+      - .:/app
+    environment:
+      DATABASE_URL: postgresql+asyncpg://postgres:password@db:5432/tasks_db
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  db_data:
+
+
+## How it works
+
+# The Alembic container runs ./wait-for-db.sh db alembic upgrade head.
+# wait-for-db.sh loops until Postgres is ready (pg_isready).
+# Once Postgres is up, it executes alembic upgrade head.
+# This prevents errors like ConnectionRefusedError when starting a fresh database.
