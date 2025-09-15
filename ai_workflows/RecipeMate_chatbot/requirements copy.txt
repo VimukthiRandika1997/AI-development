@@ -1,0 +1,9 @@
+fastapi==0.116.1
+uvicorn==0.35.0
+pydantic==2.11.7 
+httpx==0.28.1
+redis==6.4.0
+loguru==0.7.3
+streamlit==1.49.1
+google-genai==1.32.0
+python-dotenv==1.1.1
