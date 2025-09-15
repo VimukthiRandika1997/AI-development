@@ -4,6 +4,14 @@
 
 Production grade RAG for business-usecases: [check-this](/ai_workflows/Document_analysis_RAG/README.md) -->
 
+<div align="center">
+    <picture>
+        <img alt="Building AI Applications" height="200px" src="https://github.com/VimukthiRandika1997/AI-development/blob/main/assets/building_production_grade.png?raw=true">
+    </picture> 
+    
+Formulate → Build → Iterate
+</div>
+
 ## AI Agents
 
 - ### Basic Concepts
