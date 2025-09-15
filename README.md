@@ -15,6 +15,13 @@ Production grade RAG for business-usecases: [check-this](/ai_workflows/Document_
     - Deploying Agents to GCP: [more details](/ai_agents/deploying_agents_to_GCP/README.md)
 
 
+## AI Workflows
+
+- ### Chatbots
+
+    - End-to-End Chatbot for generating Recipes: [more details](/ai_workflows/RecipeMate_chatbot/README.md)
+
+
 ## API Design
 
 Architecting the FastAPI for different use-cases. 
@@ -47,4 +54,4 @@ Architecting the FastAPI for different use-cases.
         - [api-design](/ai-background-generation/README.md)
         - [product-development](https://github.com/VimukthiRandika1997/AI-background-generation)
 
-        - ![Sample generated product-shots](/ai-background-generation/assets/sample_image.png)
+        ![Sample generated product-shots](/ai-background-generation/assets/sample_image.png)
