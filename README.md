@@ -29,6 +29,10 @@ Formulate → Build → Iterate
 
     - End-to-End Chatbot for generating Recipes: [more details](/ai_workflows/RecipeMate_chatbot/README.md)
 
+## Finetuning Foundational Models
+
+- ### LLMs
+    - Text classification with LLMs: [more details](/finetuning_foundational_models/llms/text_classification/README.md)
 
 ## API Design
 
