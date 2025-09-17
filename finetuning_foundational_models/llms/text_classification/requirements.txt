@@ -4,3 +4,4 @@ bitsandbytes
 peft
 trl
 datasets 
+dotenv

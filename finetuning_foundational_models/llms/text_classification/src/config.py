@@ -8,18 +8,18 @@ load_dotenv()
 
 class Settings(BaseModel):
     # Weight & Biases settings
-    WB_TOKEN = os.getenv("WANDB_TOKEN")
+    WB_TOKEN: str = os.getenv("WANDB_TOKEN")
 
     # Huggingface settings
-    HF_TOKEN = os.getenv("HF_TOKEN")
+    HF_TOKEN: str = os.getenv("HF_TOKEN")
 
     # Dataset settings
-    BASE_DATASET_DIR_PATH="../data"
-    DATASET_NAME = "email_spam.csv"
-    DATASET_PATH = os.path.join(BASE_DATASET_DIR_PATH, DATASET_NAME)
+    BASE_DATASET_DIR_PATH: str ="../data"
+    DATASET_NAME: str = "email_spam.csv"
+    DATASET_PATH: str = os.path.join(BASE_DATASET_DIR_PATH, DATASET_NAME)
 
     # Model settings
-    BASE_MODEL = "microsoft/Phi-3.5-mini-instruct"
+    BASE_MODEL: str = "microsoft/Phi-3.5-mini-instruct"
 
 
 settings = Settings()
