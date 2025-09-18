@@ -1,4 +1,0 @@
-langchain-google-genai
-langchain 
-langchain-community 
-langchain-openai
