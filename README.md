@@ -20,6 +20,7 @@ Formulate → Build → Iterate
 
 - ### Building AI Agents with Google ADK (Agent Development Kit)
 
+    - RAG Agent with Google ADK: [more details](/ai_agents/adk_rag_agent/README.md)
     - Deploying Agents to GCP: [more details](/ai_agents/deploying_agents_to_GCP/README.md)
 
 
