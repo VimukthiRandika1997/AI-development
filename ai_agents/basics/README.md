@@ -8,6 +8,10 @@
 
 ## Frameworks
 
+### Langchain
+
+- For handling sequential workflows: [more details](/ai_agents/basics/Langchain/README.md)
+
 ### Langraph
 
-- Handling complex workflows
+- For handling complex workflows: [more details](/ai_agents/basics/Langraph/README.md)
