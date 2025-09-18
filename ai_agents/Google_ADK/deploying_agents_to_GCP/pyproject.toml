@@ -1,0 +1,40 @@
+[project]
+name = "adk-basic-bot"
+version = "0.1.0"
+description = "A bot that shortens your messages"
+authors = [
+    {name = "Vimukthi Randika", email = "vimukthirandika1997@gmail.com"}
+]
+readme = "README.md"
+license = "Apache License 2.0"
+
+[tool.poetry]
+name = "adk-basic-bot"
+version = "0.1.0"
+description = "A bot that shortens your messages"
+authors = ["Vimukthi Randika <vimukthirandika1997@gmail.com>"]
+readme = "README.md"
+license = "Apache License 2.0"
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+requests = "^2.31.0"
+google-adk = "^0.1.0"
+pydantic = "^2.11.3"
+python-dotenv = "^1.1.0"
+google-cloud-aiplatform = {extras = ["adk", "agent_engines"], version = "^1.42.1"}
+absl-py = "^2.1.0"
+cloudpickle = "^3.0.0"
+deprecated = "^1.2.18"
+
+[tool.poetry.scripts]
+adk-short-bot = "adk_basic_bot:app"
+deploy-local = "deployment.local:main"
+deploy-remote = "deployment.remote:main"
+cleanup = "deployment.cleanup:cleanup_deployment"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+ 
