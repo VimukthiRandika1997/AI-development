@@ -1,10 +1,13 @@
 # AI Background Remover
 
 <div align="center">
-    <div display="flex">
+    <div display="flex-container">
         <picture>
             <img alt="Product Item" height="600px" src="https://github.com/VimukthiRandika1997/Background-Remover/blob/main/assets/0b0bd753-3094-4d4d-a888-8125acebfca9.png">
-        </picture> 
+        </picture>
+        <picture>
+            <img alt="Product Item" height="600px" src="https://github.com/VimukthiRandika1997/Background-Remover/blob/main/assets/0b0bd753-3094-4d4d-a888-8125acebfca9_mask.png">
+        </picture>
     </div>
 </div>
 
