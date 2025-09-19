@@ -35,6 +35,10 @@ Formulate → Build → Iterate
 - ### LLMs
     - Text classification with LLMs: [more details](/finetuning_foundational_models/llms/text_classification/README.md)
 
+- ### Computer Vision
+    - AI Background Generation For Ecommerce Products: [more details](/finetuning_foundational_models/computer_vision/ai_background_generator/README.md)
+    - AI Background Remover: [more details](/finetuning_foundational_models/computer_vision/ai_background_remover/README.md)
+
 ## API Design
 
 Architecting the FastAPI for different use-cases. 
