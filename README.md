@@ -72,3 +72,8 @@ Architecting the FastAPI for different use-cases.
         - [product-development](https://github.com/VimukthiRandika1997/AI-background-generation)
 
         ![Sample generated product-shots](/ai-background-generation/assets/sample_image.png)
+
+    - #### Handling Memory Leaks With Data Ingestion Workloads
+
+        - Python tends to exihibit memory leaks during data ingestion workloads ( like upoloading files, processing files)
+        - This needs to be addressed in an efficient and safe way: [more details](/api_design/FastAPI/handling_memory_leaks/README.md)
