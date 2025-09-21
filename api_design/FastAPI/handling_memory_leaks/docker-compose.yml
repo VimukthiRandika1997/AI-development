@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    volumes:
+      - shared_tmp:/tmp # the volume to be shared
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+
+  worker:
+    build: .
+    volumes:
+      - shared_tmp:/tmp # the volume to be shared
+    command: celery -A app.worker worker --concurrency=1 --max-tasks-per-child=1
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7
+
+volumes:
+  shared_tmp:
