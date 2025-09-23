@@ -2,6 +2,10 @@
 
 This is the Non-blocking approach to run processes
 
+## 🚀 TL;DR
+
+- **Single thread**, but can **switch tasks while waiting**.
+
 ## 1️⃣ Why asyncio?
 
 - Normally, Python code runs synchronously (each line waits until the previous one finishes)
