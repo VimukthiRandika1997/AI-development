@@ -39,6 +39,11 @@ Formulate → Build → Iterate
     - AI Background Generation For Ecommerce Products: [more details](/finetuning_foundational_models/computer_vision/ai_background_generator/README.md)
     - AI Background Remover: [more details](/finetuning_foundational_models/computer_vision/ai_background_remover/README.md)
 
+
+## Classical ML
+
+- Hyper-parameter Tuning with XGBoost 3.0 and Optuna: CPU based vs GPU: [more details](/classical_ml/gpu_accelerated_pipeline/README.md)
+
 ## API Design
 
 Architecting the FastAPI for different use-cases. 
