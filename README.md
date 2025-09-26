@@ -43,6 +43,7 @@ Formulate → Build → Iterate
 ## Classical ML
 
 - Hyper-parameter Tuning with XGBoost 3.0 and Optuna: CPU based vs GPU: [more details](/classical_ml/gpu_accelerated_pipeline/README.md)
+- Fraud Detection System: [more details](/classical_ml/fraud_detection_system/README.md)
 
 ## API Design
 
