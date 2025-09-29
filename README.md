@@ -83,3 +83,7 @@ Architecting the FastAPI for different use-cases.
 
         - Python tends to exihibit memory leaks during data ingestion workloads ( like upoloading files, processing files)
         - This needs to be addressed in an efficient and safe way: [more details](/api_design/FastAPI/handling_memory_leaks/README.md)
+
+    - #### FastAPI Template 
+
+        - A minimal FastAPI Template for starting AI project from scratch: [more details](https://github.com/VimukthiRandika1997/fastapi-template)
