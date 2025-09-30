@@ -29,6 +29,7 @@ Formulate → Build → Iterate
 - ### Chatbots
 
     - End-to-End Chatbot for generating Recipes: [more details](/ai_workflows/RecipeMate_chatbot/README.md)
+    - Knowledge Graph Creation For Product shots: [more details](/ai_workflows/knowledge_graphs/README.md)
 
 ## Finetuning Foundational Models
 
