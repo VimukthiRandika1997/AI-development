@@ -100,3 +100,8 @@ Architecting the FastAPI for different use-cases.
 
 - ### MaskAnnotator
     - HQ-SAM based masked annotator tool for Computer Vision Tasks: [more details](https://github.com/VimukthiRandika1997/MaskAnnotator)
+ 
+## Learning
+
+- ### Adapting Diffusion Models
+    - DDPM from scratch: [more details](https://github.com/VimukthiRandika1997/DDPM?tab=readme-ov-file)
