@@ -45,6 +45,7 @@ Formulate → Build → Iterate
 - ### Computer Vision
     - AI Background Generation For Ecommerce Products: [more details](/finetuning_foundational_models/computer_vision/ai_background_generator/README.md)
     - AI Background Remover: [more details](/finetuning_foundational_models/computer_vision/ai_background_remover/README.md)
+    - Training and evaluating custom Object-detector with RT-DETR: [more details](https://github.com/VimukthiRandika1997/RT-DETR/tree/main/RT-DETR_custom_kaggle)
 
 
 ## Classical ML
