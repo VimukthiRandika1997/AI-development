@@ -22,6 +22,10 @@ Formulate → Build → Iterate
 
     - RAG Agent with Google ADK: [more details](/ai_agents/Google_ADK/adk_rag_agent/README.md)
     - Deploying Agents to GCP: [more details](/ai_agents/Google_ADK/deploying_agents_to_GCP/README.md)
+ 
+- ### Custom Agents
+
+    - VisionLabelingAgent (Auto Labeling AI Agent For Images): [more details](https://github.com/VimukthiRandika1997/VisionLabelingAgent)
 
 
 ## AI Workflows
