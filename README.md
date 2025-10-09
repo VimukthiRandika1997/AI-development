@@ -94,3 +94,8 @@ Architecting the FastAPI for different use-cases.
     - #### FastAPI Template 
 
         - A minimal FastAPI Template for starting AI project from scratch: [more details](https://github.com/VimukthiRandika1997/fastapi-template)
+
+## Tools
+
+- ### MaskAnnotator
+    - HQ-SAM based masked annotator tool for Computer Vision Tasks: [more details](https://github.com/VimukthiRandika1997/MaskAnnotator)
