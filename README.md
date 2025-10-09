@@ -105,3 +105,6 @@ Architecting the FastAPI for different use-cases.
 
 - ### Adapting Diffusion Models
     - DDPM from scratch: [more details](https://github.com/VimukthiRandika1997/DDPM?tab=readme-ov-file)
+
+- ### Clustering
+    - Cohesive Clustering (Clustering approach where the consistency is preserved): [more details](https://github.com/VimukthiRandika1997/Cohesive_clustering)
